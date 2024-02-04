@@ -15,6 +15,7 @@
 
   position: relative;
   overflow: hidden;
+  transition: 0.2s;
 }
 
 .diagBg {
@@ -26,6 +27,7 @@
   transform: skew(0deg, 75deg);
   animation: gradientIntro 10s;
   z-index: 1;
+  transition: 0.2s;
 }
 
 .beats {
@@ -109,6 +111,7 @@
   opacity: 1;
   animation: shopNowFade 10s;
   mask-image: url(images/shopnow_frame.png);
+  transition: 0.2s;
 }
 
 .shopNow {
