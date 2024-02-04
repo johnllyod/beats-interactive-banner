@@ -1,0 +1,420 @@
+:root {
+  --bg1: #e13a2d;
+  --bg2: #262626;
+  --btn1: #83211b;
+}
+
+* {
+  font-family: sans-serif;
+}
+
+.bannerFrame {
+  width: 300px;
+  height: 600px;
+  background-color: var(--bg2);
+
+  position: relative;
+  overflow: hidden;
+}
+
+.diagBg {
+  width: 300px;
+  height: 1150px;
+  background-color: var(--bg1);
+  position: absolute;
+  top: 50%;
+  transform: skew(0deg, 75deg);
+  animation: gradientIntro 10s;
+  z-index: 1;
+}
+
+.beats {
+  position: absolute;
+  top: 44%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  animation: beatsFadeIn 10s;
+  z-index: 3;
+  transition: 1s;
+}
+
+.beatsLogo {
+  width: 70%;
+  opacity: 0;
+  animation: beatsLogo 2.5s 2.2s;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.f1m {
+  font-size: 70px;
+  color: white;
+  animation: fmFade 2s;
+  z-index: 2;
+  opacity: 0;
+
+  position: absolute;
+  top: 21%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.f2m {
+  font-size: 70px;
+  color: white;
+  animation: fmFade 2s 0.5s;
+  opacity: 0;
+
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.colorOptions {
+  width: 100%;
+  height: 70px;
+  z-index: 4;
+  padding: 10px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  animation: featureBtnFade 7s;
+}
+
+.colorBtn {
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+  border-radius: 50%;
+  float: left;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+.colorBtn:hover {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.shopNowBG {
+  width: 100%;
+  height: 200px;
+  background-color: var(--btn1);
+  z-index: 2;
+  opacity: 1;
+  animation: shopNowFade 10s;
+  mask-image: url(images/shopnow_frame.png);
+}
+
+.shopNow {
+  width: 100%;
+  height: 200px;
+  border: 0;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  z-index: 4;
+  opacity: 1;
+  animation: shopNowFade 10s;
+}
+
+.shopNow:hover {
+  cursor: pointer;
+}
+
+.shopNow:hover + .productContainer .beats {
+  width: 100%;
+  left: 50%;
+}
+
+.shopNow:hover + .productContainer .featureBtns {
+  opacity: 0;
+}
+
+.featureBtns {
+  width: 300px;
+  height: 500px;
+  position: relative;
+  animation: featureBtnFade 7s;
+  z-index: 3;
+  transition: 0.3s;
+}
+
+.fbBattery {
+  position: absolute;
+  top: 49%;
+  left: 15%;
+}
+
+.fbCalls {
+  position: absolute;
+  top: 49%;
+  left: 45%;
+}
+
+.fbAudio {
+  position: absolute;
+  top: 49%;
+  left: 70%;
+}
+
+.fbCompatible {
+  position: absolute;
+  top: 70%;
+  left: 25%;
+}
+
+.borderCircle {
+  width: 35px;
+  height: 35px;
+  border: 3px solid white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+}
+
+.fullCircle {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 0px;
+  transition: 0.3s;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.verticalLine {
+  width: 5px;
+  height: 0px;
+  background-color: white;
+  transform: translate(-50%, 0%);
+  opacity: 1;
+  transition: 0.1s;
+
+  position: absolute;
+  top: 50%;
+  left: 29.5%;
+}
+
+.borderCircle:hover {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.borderCircle:hover > .fullCircle {
+  width: 12px;
+  height: 12px;
+  border: 5px solid white;
+  background-color: transparent;
+  transition-delay: 0s;
+}
+
+.borderCircle:hover > .verticalLine {
+  top: 2%;
+  height: 17px;
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+.borderCircleClicked {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--bg2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+}
+
+.fullCircleClicked {
+  width: 12px;
+  height: 12px;
+  border: 5px solid var(--bg2);
+  background-color: transparent;
+
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0px;
+  transition: 0.3s;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.verticalLineClicked {
+  width: 5px;
+  height: 18px;
+  background-color: var(--bg2);
+  transform: translate(-50%, 0%);
+  opacity: 1;
+  transition: 0.5s;
+
+  position: absolute;
+  top: 0%;
+  left: 29%;
+}
+
+.featureDetail {
+  width: 100%;
+  height: 120px;
+  color: var(--btn1);
+  background-color: white;
+  background: url(images/feature_frame.png);
+  z-index: 5;
+  padding-top: 10px;
+  transition: 0.5s;
+}
+
+.featureDetail h4 {
+  text-align: center;
+}
+
+.featureInfo {
+  width: 200px;
+  margin: auto;
+}
+
+.featureInfo img {
+  float: left;
+  width: 32px;
+  margin-right: 5px;
+}
+
+.featureInfo p {
+  font-size: 20px;
+}
+
+.showDetail {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+}
+
+.hideDetail {
+  position: absolute;
+  bottom: -50%;
+  left: 0%;
+}
+
+.shopNowDown {
+  position: absolute;
+  bottom: -25%;
+}
+
+.shopNowUp {
+  position: absolute;
+  bottom: -5%;
+}
+
+@keyframes beatsFadeIn {
+  0% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+    left: 0%;
+  }
+  55% {
+    opacity: 1;
+  }
+  65% {
+    left: 22%;
+  }
+}
+
+@keyframes featureBtnFade {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes gradientIntro {
+  0% {
+    top: 0%;
+    transform: skew(0deg, 0deg);
+  }
+  7% {
+    top: 0%;
+    transform: skew(0deg, 0deg);
+  }
+  15% {
+    top: -200%;
+    transform: skew(0deg, 0deg);
+  }
+  20% {
+    top: -200%;
+    transform: skew(0deg, 0deg);
+  }
+  30% {
+    top: 100%;
+    transform: skew(0deg, 0deg);
+  }
+  50% {
+    top: 50%;
+    transform: skew(0deg, 75deg);
+  }
+}
+
+@keyframes fmFade {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes beatsLogo {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 1;
+    left: 50%;
+  }
+  100% {
+    opacity: 0;
+    left: 0%;
+  }
+}
+
+@keyframes shopNowFade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    bottom: -26%;
+  }
+  60% {
+    opacity: 1;
+    bottom: -25%;
+  }
+}

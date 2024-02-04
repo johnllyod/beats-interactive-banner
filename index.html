@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Preview for interactive creative banner"
+    />
+    <title>Interactive Creative Banner</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="bannerFrame">
+      <span class="diagBg">
+        <h1 class="f1m">It all started with music</h1></span
+      >
+      <h1 class="f2m">Join the Beats Army</h1>
+
+      <div class="colorOptions">
+        <div
+          class="colorBtn"
+          style="background-color: #242426"
+          onclick="ChangeColor(1)"
+        ></div>
+        <div
+          class="colorBtn"
+          style="background-color: #cf2617"
+          onclick="ChangeColor(2)"
+        ></div>
+        <div
+          class="colorBtn"
+          style="background-color: #cc9a96"
+          onclick="ChangeColor(3)"
+        ></div>
+        <div
+          class="colorBtn"
+          style="background-color: #cdb395"
+          onclick="ChangeColor(4)"
+        ></div>
+        <div
+          class="colorBtn"
+          style="background-color: #b2b2b1"
+          onclick="ChangeColor(5)"
+        ></div>
+      </div>
+
+      <img class="beatsLogo" src="images/beats_logo.png" alt="beats logo" />
+
+      <div id="ShopNowBG" class="shopNowBG shopNowDown"></div>
+      <a
+        href="https://www.beatsbydre.com/uk/headphones/solo3-wireless/MX472/citrus-red"
+        id="ShopNow"
+        class="shopNow shopNowDown"
+        target="_blank"
+        ><p>Shop now</p></a
+      >
+
+      <div class="productContainer">
+        <img
+          id="BeatProduct"
+          class="beats"
+          src="images/beats_red.png"
+          alt="beats solo 3 wireless"
+        />
+
+        <div class="featureBtns">
+          <div
+            id="FeatureDetail1"
+            class="borderCircle fbBattery"
+            onclick="OpenFeatureDetails(this)"
+          >
+            <div class="fullCircle"></div>
+            <div class="verticalLine"></div>
+          </div>
+          <div
+            id="FeatureDetail2"
+            class="borderCircle fbCalls"
+            onclick="OpenFeatureDetails(this)"
+          >
+            <div class="fullCircle"></div>
+            <div class="verticalLine"></div>
+          </div>
+          <div
+            id="FeatureDetail3"
+            class="borderCircle fbAudio"
+            onclick="OpenFeatureDetails(this)"
+          >
+            <div class="fullCircle"></div>
+            <div class="verticalLine"></div>
+          </div>
+          <div
+            id="FeatureDetail4"
+            class="borderCircle fbCompatible"
+            onclick="OpenFeatureDetails(this)"
+          >
+            <div class="fullCircle"></div>
+            <div class="verticalLine"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="FeatureDetail" class="featureDetail hideDetail">
+        <h4>beats Solo3 Wireless</h4>
+        <div class="featureInfo">
+          <img id="DetailIcon" src="images/battery.svg" alt="battery icon" />
+          <p id="DetailText">
+            <strong>Up to 40 hours of listening time</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
